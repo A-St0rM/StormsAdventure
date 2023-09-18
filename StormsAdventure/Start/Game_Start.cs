@@ -10,13 +10,15 @@ namespace StormsAdventure.Start
 {
     public class Game_Start
     {
-         
+        Inventory playerInventory = new Inventory();
+
         public void Menu()
         {
             bool state = true;
-
+            
             while (state == true)
             {
+                
                 Console.Clear();
                 Console.WriteLine("Welcome to Storm's RPG game");
                 Console.WriteLine("---------------------------");
@@ -29,7 +31,8 @@ namespace StormsAdventure.Start
                 {
                     Console.Clear();
                     state = false;
-                    StartGame();
+                    Game_Intro();
+                    
 
                 }
                 else if (playerChoice == "2")
@@ -49,8 +52,9 @@ namespace StormsAdventure.Start
         }
         
 
-        public void StartGame()
+        public void Game_Intro()
         {
+            playerInventory.AddToInventory("hej");
             House house = new House();
             Console.WriteLine("The sun poured through my window. Another day had dawned. Storm walks down the stairs");
             Console.WriteLine("Mom: Good morning Storm");
@@ -98,7 +102,7 @@ namespace StormsAdventure.Start
         {
             Run run = new Run();   
             bool state = true;
-            Inventory inventory = new Inventory();
+            
             while (state == true)
             {
                 Console.WriteLine("What do u want to do?");
@@ -122,7 +126,7 @@ namespace StormsAdventure.Start
                 }
                 else if (playerChoice == "3") //Inventory
                 {
-                    inventory.Display_Inventory();
+                    playerInventory.Display_Inventory();
 
                 }
                 else if (playerChoice == "4") //Exit

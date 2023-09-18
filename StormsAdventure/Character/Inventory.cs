@@ -8,22 +8,26 @@ namespace StormsAdventure.Character
 {
     public class Inventory
     {
-        private List<string> inventory = new List<string>();
+        private List<string> inventory;
 
-        public Inventory(IEnumerable<string> initialItems = null)
+        public Inventory()
         {
-            if (initialItems != null)
+            inventory = new List<string>();
+
+            if (inventory.Count == 0)
             {
-                inventory.AddRange(initialItems);
+                inventory.Add("Cookie");
+                inventory.Add("Shield");
+                inventory.Add("Potion");
             }
         }
 
         public void Display_Inventory()
         {
             Console.WriteLine("\tThis is your inventory");
-            foreach (var item in inventory)
+            for (int i = 0; i < inventory.Count; i++)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(inventory[i]);
             }
         }
 
