@@ -8,11 +8,48 @@ namespace StormsAdventure.Start
 {
     public class Game_Start
     {
-        //Run run = new Run();    
-        //House house = new House();
+         
+        public void Menu()
+        {
+            bool state = true;
+
+            while (state == true)
+            {
+                Console.Clear();
+                Console.WriteLine("Welcome to Storm's RPG game");
+                Console.WriteLine("---------------------------");
+                Console.WriteLine("1 - Start the game");
+                Console.WriteLine("2 - Exit the game");
+
+                string playerChoice = Console.ReadLine();
+
+                if (playerChoice == "1")
+                {
+                    Console.Clear();
+                    state = false;
+                    StartGame();
+
+                }
+                else if (playerChoice == "2")
+                {
+                    state = false;
+                    Console.Clear();
+                    Environment.Exit(0);
+
+                }
+                else
+                {
+                    Console.WriteLine("---------------------------");
+                    Console.WriteLine("U entered a wrong value plz try agian");
+                    Console.Clear();
+                }
+            }
+        }
+        
 
         public void StartGame()
         {
+            House house = new House();
             Console.WriteLine("The sun poured through my window. Another day had dawned. Storm walks down the stairs");
             Console.WriteLine("Mom: Good morning Storm");
             Console.WriteLine("Storm: Morning Mom");
@@ -42,12 +79,12 @@ namespace StormsAdventure.Start
                     Console.WriteLine("Storm: Nah, actually not");
                     Console.WriteLine("RIP Alissa Storm");
                     Console.WriteLine("Cause of death: Mom with Shahata");
-                    //Menu();
+                    Menu();
                 }
                 else
                 {
                     Console.WriteLine("---------------------------");
-                    Console.WriteLine("U entered a wrong value plz try agian");
+                    Console.WriteLine("You entered a wrong value plz try agian");
                     Console.Clear();
                 }
             }
@@ -56,6 +93,7 @@ namespace StormsAdventure.Start
 
         public void Controls() //Should popup when the player needs to do something
         {
+            Run run = new Run();   
             bool state = true;
 
             while (state == true)
@@ -71,12 +109,12 @@ namespace StormsAdventure.Start
 
                 if (playerChoice == "1") //See stats
                 {
-                    //run.stats();
+                    run.stats();
 
                 }
                 else if (playerChoice == "2") //Move Command
                 {
-                    //run.Game_Run();
+                    run.Game_Run();
 
                 }
                 else if (playerChoice == "3") //Inventory
@@ -84,7 +122,7 @@ namespace StormsAdventure.Start
                     Console.WriteLine("This is your inventory ahah");//Do not work fix it storm
 
                 }
-                else if (playerChoice == "3") //Exit
+                else if (playerChoice == "4") //Exit
                 {
                     state = false;
                     Console.Clear();

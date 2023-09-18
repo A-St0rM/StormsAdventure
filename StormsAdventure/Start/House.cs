@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +14,7 @@ namespace StormsAdventure.Start
         public void Start_House()
         {
             Console.WriteLine("You are in a house");
+            DownStairs();
         }
 
 
@@ -32,18 +34,18 @@ namespace StormsAdventure.Start
             {
               int PlayerChoice = Convert.ToInt32(Console.ReadLine());
 
-                if(PlayerChoice == 1)
+                if(PlayerChoice == 1) // We are in the living room
                 {
-                    Console.WriteLine();
+                    Console.WriteLine("You see all your siblings watching TV");
 
                 }
-                else if (PlayerChoice == 2)
+                else if (PlayerChoice == 2) // Front door
                 {
                     Console.WriteLine();
                 }
                 else
                 {
-                    Console.WriteLine();
+                    Console.WriteLine("You entered a wrong value plz try agian");
                 }
 
 
