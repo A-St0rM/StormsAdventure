@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StormsAdventure.Character;
+//using StormsAdventure.Levels;
 
 namespace StormsAdventure.Start
 {
@@ -74,11 +76,12 @@ namespace StormsAdventure.Start
                     house.Start_House();
                     break;
                 }
-                else if (Playerchoice == 2)
+                else if (Playerchoice == 2)// Why i not read when typing 2?!? Caps help me
                 {
                     Console.WriteLine("Storm: Nah, actually not");
                     Console.WriteLine("RIP Alissa Storm");
                     Console.WriteLine("Cause of death: Mom with Shahata");
+                    
                     Menu();
                 }
                 else
@@ -95,14 +98,14 @@ namespace StormsAdventure.Start
         {
             Run run = new Run();   
             bool state = true;
-
+            Inventory inventory = new Inventory();
             while (state == true)
             {
                 Console.WriteLine("What do u want to do?");
                 Console.WriteLine("---------------------------");
                 Console.WriteLine("1 - See your stats");
-                Console.WriteLine("2 - See your inventory");
-                Console.WriteLine("3 - Move");
+                Console.WriteLine("2 - Move");
+                Console.WriteLine("3 - See your inventory");
                 Console.WriteLine("4 - Exit the game");
 
                 string playerChoice = Console.ReadLine();
@@ -119,7 +122,7 @@ namespace StormsAdventure.Start
                 }
                 else if (playerChoice == "3") //Inventory
                 {
-                    Console.WriteLine("This is your inventory ahah");//Do not work fix it storm
+                    inventory.Display_Inventory();
 
                 }
                 else if (playerChoice == "4") //Exit

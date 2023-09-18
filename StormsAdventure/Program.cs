@@ -12,7 +12,6 @@ namespace StormsAdventure
 
             start.Menu();
 
-
         }
     }
 }
