@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StormsAdventure.Fighting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -10,10 +11,12 @@ namespace StormsAdventure.Start
     public class House
     {
         Game_Start start = new Game_Start();
+        Combat Combat = new Combat();
 
         public void Start_House()
         {
             Console.WriteLine("You are in a house");
+            //Combat.Start_Combat();
             DownStairs();
         }
 

@@ -4,16 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using StormsAdventure.Character;
+using StormsAdventure.Stuff;
 //using StormsAdventure.Levels;
 
 namespace StormsAdventure.Start
 {
     public class Game_Start
     {
-        Inventory playerInventory = new Inventory();
-
+        
+        Items test = new Items("Kasper", 10);
         public void Menu()
         {
+            Inventory.Initialize();
             bool state = true;
             
             while (state == true)
@@ -54,7 +56,7 @@ namespace StormsAdventure.Start
 
         public void Game_Intro()
         {
-            playerInventory.AddToInventory("hej");
+            Inventory.AddToInventory(test);
             House house = new House();
             Console.WriteLine("The sun poured through my window. Another day had dawned. Storm walks down the stairs");
             Console.WriteLine("Mom: Good morning Storm");
@@ -126,7 +128,7 @@ namespace StormsAdventure.Start
                 }
                 else if (playerChoice == "3") //Inventory
                 {
-                    playerInventory.Display_Inventory();
+                    Inventory.Display_Inventory();
 
                 }
                 else if (playerChoice == "4") //Exit

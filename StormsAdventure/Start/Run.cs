@@ -10,7 +10,7 @@ namespace StormsAdventure.Start
     {
         Player player = new Player(100, 100);
 
-        public void Game_Run()
+        public void Game_Run() //For things witch need to tick when the game runs
         {
             player.Tick_Stamina();
         }

@@ -4,6 +4,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using StormsAdventure.Stuff;
 
 namespace StormsAdventure.Start
 {
@@ -25,28 +26,30 @@ namespace StormsAdventure.Start
             Console.WriteLine("Stamina: " + stamina + " Health " + health);
         }
 
+        public int ChangeHealth(int healtch_Change)
+        {
+            return health - healtch_Change;
+        }
+
         public void Tick_Stamina()
         {
             stamina = stamina - 10;
         }
 
-        public void Eat(string food)
+        public void Eat(Items food)
         {
-            int cookie = 5;
-            int apple = 10;
-            int mushroom = -10;
 
-            if (food == "cookie")
+            if (food.Name == "cookie")
             {
-                stamina = stamina + cookie;
+                stamina += food.Item_stat;
             }
-            else if (food == "apple")
+            else if (food.Name == "apple")
             {
-                stamina = stamina + apple;
+                stamina += food.Item_stat;
             }
-            else if (food == "mushroom")
+            else if (food.Name == "mushroom")
             {
-                
+                stamina -= food.Item_stat;
             }
         }
 
