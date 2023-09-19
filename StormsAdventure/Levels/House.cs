@@ -44,7 +44,9 @@ namespace StormsAdventure.Start
                 }
                 else if (PlayerChoice == 2) // Front door
                 {
-                    Console.WriteLine();
+                    Console.WriteLine("You finally stepped out of the house and starting your journey!");
+                    Console.WriteLine("Mom has packed Cookies and apples for you so you dont get tired on your way!");
+                    Console.WriteLine("Make sure to check your backpack when you get tired ;)");
                 }
                 else
                 {
@@ -54,6 +56,48 @@ namespace StormsAdventure.Start
 
 
             }
+
+        }   
+        public void LivingRoom()
+        {
+            Console.WriteLine("You are watching TV with ur siblings. The front door is now on right side and the kitchen straight forward");
+            start.Controls();
+            Console.WriteLine("Where would you like to go?");
+            Console.WriteLine(" 1 - Forward");
+            Console.WriteLine(" 2 - Front door");
+
+            bool State = true;
+            int PlayerChoice = Convert.ToInt32(Console.ReadLine());
+
+            while(State == true)
+            {
+                if(PlayerChoice == 1)
+                {
+                    Console.WriteLine("You are in the kitchen again dumbass!");
+                    Console.WriteLine("_____________________________________");
+                    DownStairs();
+                }
+
+                else if (PlayerChoice == 2)
+                {
+                    Console.WriteLine("You finally stepped out of the house and starting your journey!");
+                    Console.WriteLine("Mom has packed Cookies and apples for you so you dont get tired on your way!");
+                    Console.WriteLine("Make sure to check your backpack when you get tired ;)");
+                }
+                else
+                {
+                    Console.WriteLine("You entered a wrong value plz try agian");
+                }
+
+
+
+
+
+
+
+            }
+
+
 
         }
 
