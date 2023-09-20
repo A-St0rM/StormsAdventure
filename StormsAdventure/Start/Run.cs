@@ -1,4 +1,5 @@
 ﻿using StormsAdventure.Character;
+using StormsAdventure.Fighting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace StormsAdventure.Start
         {
             Inventory.Initialize();
             Player.Initialize();
+            Enemy.Initialize();
 
             Game_Start start = new Game_Start();
 
