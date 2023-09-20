@@ -15,6 +15,7 @@ namespace StormsAdventure.Start
         public void Menu()
         {
             Inventory.Initialize();
+            Player.Initialize();
             bool state = true;
             
             while (state == true)

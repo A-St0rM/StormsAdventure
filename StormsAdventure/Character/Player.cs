@@ -26,9 +26,9 @@ namespace StormsAdventure.Start
             }
             else
             {
-                isInitialize = true;
                 health = 100;
                 stamina = 100;
+                isInitialize = true;
             }
 
         }
