@@ -15,7 +15,7 @@ namespace StormsAdventure.Start
             Player.Tick_Stamina();
         }
 
-        public static void StartGame()
+        public static void StartGame() //This method will run all items at game run
         {
             Inventory.Initialize();
             Player.Initialize();

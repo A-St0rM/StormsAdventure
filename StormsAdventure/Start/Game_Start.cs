@@ -99,8 +99,7 @@ namespace StormsAdventure.Start
         }
 
         public void Controls() //Should popup when the player needs to do something
-        {
-            Run run = new Run();   
+        {  
             bool state = true;
             
             while (state == true)
