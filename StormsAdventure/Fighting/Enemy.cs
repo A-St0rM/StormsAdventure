@@ -24,17 +24,17 @@ namespace StormsAdventure.Fighting
             }
             else if (Convert.ToInt32(currentTime.TotalHours) <= 6 || Convert.ToInt32(currentTime.TotalHours) >= 18)
             {
-                Creatures enemy1 = new Creatures("Sister", 5, 20);
+                Creatures enemy1 = new Creatures("Sister", 5, 20); // HAHA sister what a meme
                 Creatures enemy2 = new Creatures("Dog", 1, 10);
                 Creatures enemy3 = new Creatures("Cat", 10, 32);
                 Creatures enemy4 = new Creatures("Cashier", 8, 19);
                 Creatures enemy5 = new Creatures("Holigan", 7, 27);
-                enemies.Add(enemy1);
-                enemies.Add(enemy2);
-                enemies.Add(enemy3);
-                enemies.Add(enemy4);
-                enemies.Add(enemy5);
-                isInitialize = true;
+                //enemies.Add(enemy1);
+                //enemies.Add(enemy2);
+                //enemies.Add(enemy3); // // Error occurred when i started the program. Apparently its not set to an object ->  System.NullReferenceException
+                //enemies.Add(enemy4);
+                //enemies.Add(enemy5);
+                //isInitialize = true;
             }
 
             else
@@ -46,7 +46,7 @@ namespace StormsAdventure.Fighting
                 Creatures enemy5 = new Creatures("Dwarf", 7, 27);
                 enemies.Add(enemy1);
                 enemies.Add(enemy2);
-                enemies.Add(enemy3);
+                enemies.Add(enemy3); 
                 enemies.Add(enemy4);
                 enemies.Add(enemy5);
                 isInitialize = true;
@@ -61,7 +61,7 @@ namespace StormsAdventure.Fighting
             return enemies[num];
         }
 
-        public static void 
+         
 
 
     }

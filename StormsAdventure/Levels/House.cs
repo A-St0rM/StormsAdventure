@@ -1,4 +1,6 @@
-﻿using StormsAdventure.Fighting;
+﻿using StormsAdventure.Character;
+using StormsAdventure.Fighting;
+using StormsAdventure.Levels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,7 @@ namespace StormsAdventure.Start
 {
     public class House
     {
+        Outside outside = new Outside();
         Game_Start start = new Game_Start();
         Combat Combat = new Combat();
 
@@ -35,18 +38,21 @@ namespace StormsAdventure.Start
 
             while(state == true)
             {
-              int PlayerChoice = Convert.ToInt32(Console.ReadLine());
+                int PlayerChoice = Convert.ToInt32(Console.ReadLine());
 
                 if(PlayerChoice == 1) // We are in the living room
                 {
                     Console.WriteLine("You see all your siblings watching TV");
+                    LivingRoom();
 
                 }
                 else if (PlayerChoice == 2) // Front door
                 {
                     Console.WriteLine("You finally stepped out of the house and starting your journey!");
                     Console.WriteLine("Mom has packed Cookies and apples for you so you dont get tired on your way!");
-                    Console.WriteLine("Make sure to check your backpack when you get tired ;)");
+                    
+                    Inventory.Display_Inventory();
+                    outside.Start_Outside();
                 }
                 else
                 {
@@ -82,14 +88,17 @@ namespace StormsAdventure.Start
                 {
                     Console.WriteLine("You finally stepped out of the house and starting your journey!");
                     Console.WriteLine("Mom has packed Cookies and apples for you so you dont get tired on your way!");
-                    Console.WriteLine("Make sure to check your backpack when you get tired ;)");
+                    
+                    Console.WriteLine("______________________________________________________________________________");
+                    Inventory.Display_Inventory();
+                    outside.Start_Outside();
                 }
                 else
                 {
                     Console.WriteLine("You entered a wrong value plz try agian");
                 }
 
-
+                
 
 
 

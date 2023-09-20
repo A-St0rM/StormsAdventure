@@ -80,9 +80,9 @@ namespace StormsAdventure.Start
                     house.Start_House();
                     break;
                 }
-                else if (Playerchoice == 2)// Why i not read when typing 2?!? Caps help me
+                else if (Playerchoice == 2)
                 {
-                    Console.WriteLine("Storm: Nah, actually not");
+                    Console.WriteLine("Storm: Nah, actually not"); // Need to fix the text, disseapers instantly
                     Console.WriteLine("RIP Alissa Storm");
                     Console.WriteLine("Cause of death: Mom with Shahata");
                     
