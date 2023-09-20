@@ -123,6 +123,7 @@ namespace StormsAdventure.Start
                 else if (playerChoice == "2") //Move Command
                 {
                     run.Game_Run();
+                    state = false;
 
                 }
                 else if (playerChoice == "3") //Inventory
