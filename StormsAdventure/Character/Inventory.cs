@@ -1,4 +1,5 @@
-﻿using StormsAdventure.Stuff;
+﻿using StormsAdventure.Start;
+using StormsAdventure.Stuff;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,8 +40,36 @@ namespace StormsAdventure.Character
             Console.WriteLine("\tThis is your inventory");
             for (int i = 0; i < inventory.Count; i++)
             {
-                Console.WriteLine(inventory[i].Name + " || " + inventory[i].Item_stat);
+                Console.WriteLine(i + " || " + inventory[i].Name + " || " + inventory[i].Item_stat);
             }
+            bool  inv_State = true;
+            while (inv_State == true)
+            {
+                Console.WriteLine("Do you want to use anything from your inventroy");
+                Console.WriteLine("Yes / No");
+                string player_Answer = Console.ReadLine();
+
+                if (player_Answer.ToLower() == "yes")
+                {
+                    Console.WriteLine("Choose what index from your inventory you want :)");
+                    int inventory_Index = Convert.ToInt32(Console.ReadLine());
+
+                    PickFromInventory(inventory[inventory_Index]);
+
+                    inv_State = false;
+                    Console.Clear();
+                }
+                else if (player_Answer.ToLower() == "no")
+                {
+                    inv_State = false;
+                    Console.Clear();
+                }
+                else
+                {
+                    Console.WriteLine("Pla write the corret answer");
+                }
+            }
+
         }
 
         public static void AddToInventory(Items item)
@@ -48,10 +77,10 @@ namespace StormsAdventure.Character
             inventory.Add(item); 
         }
 
-        public static void RemoveFromInventory(Items item)
+        private static void PickFromInventory(Items item)
         {
+            Player.Eat(item);
             inventory.Remove(item);
-            
         }
     }
 }

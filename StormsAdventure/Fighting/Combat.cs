@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using StormsAdventure.Character;
@@ -15,17 +17,50 @@ namespace StormsAdventure.Fighting
         {
             EnemyController enemyController = new EnemyController();
             Enemy enemy;
-            int player_Health;
             enemy = enemyController.Enemy_Pick();
             Console.WriteLine(enemy.Name);
 
-            //do
-            //{
-            //    Console.WriteLine("Select your action");
-                
+            bool game_State = true;
 
-            //}
-            //while (player_Health > 0 || enemy.Enemy_Health > 0);
+            Console.WriteLine("The combat starts");
+            Console.WriteLine("You are up aginst a: " + enemy.Name + " Good luck");
+
+            while(game_State == true)
+            {
+                if (Player.health <= 1)
+                {
+                    if (enemy.Enemy_Health <= 1)
+                    {
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("You won the combat stupid :)");
+                        game_State =  false;
+                    }
+
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("You have died");
+                    Console.WriteLine("What a noob");
+                    game_State = false;
+                }
+            }
 
         }
 

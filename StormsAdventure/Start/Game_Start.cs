@@ -12,7 +12,6 @@ namespace StormsAdventure.Start
     public class Game_Start
     {
         
-        Items test = new Items("Kasper", 10);
         public void Menu()
         {
             Inventory.Initialize();
@@ -56,7 +55,6 @@ namespace StormsAdventure.Start
 
         public void Game_Intro()
         {
-            Inventory.AddToInventory(test);
             House house = new House();
             Console.WriteLine("The sun poured through my window. Another day had dawned. Storm walks down the stairs");
             Console.WriteLine("Mom: Good morning Storm");

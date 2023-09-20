@@ -5,38 +5,44 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using StormsAdventure.Stuff;
+using StormsAdventure.Character;
 
 namespace StormsAdventure.Start
 {
-    public class Player
+    public static class Player
     {
         
-        public int health { get; set; }
+        public static int health { get; set; }
 
-        public int stamina { get; set; }
+        public static int stamina { get; set; }
 
-        public Player(int health, int stamina)
+        private static bool isInitialize;
+
+        public static void Initialize()
         {
-            this.health = health;
-            this.stamina = stamina;
+            if (isInitialize)
+            {
+                return;
+            }
+            else
+            {
+                isInitialize = true;
+                health = 100;
+            }
+
         }
 
-        public void Display_Stats()
+        public static void Display_Stats()
         {
             Console.WriteLine("Stamina: " + stamina + " Health " + health);
         }
 
-        public int ChangeHealth(int healtch_Change)
-        {
-            return health - healtch_Change;
-        }
-
-        public void Tick_Stamina()
+        public static void Tick_Stamina()
         {
             stamina = stamina - 10;
         }
 
-        public void Eat(Items food)
+        public static void Eat(Items food)
         {
 
             if (food.Name == "cookie")
