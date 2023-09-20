@@ -15,21 +15,19 @@ namespace StormsAdventure.Fighting
 
         public void Start_Combat()
         {
-            EnemyController enemyController = new EnemyController();
-            Enemy enemy;
-            enemy = enemyController.Enemy_Pick();
-            Console.WriteLine(enemy.Name);
+
+            Creatures currentCreature = Enemy.Enemy_Pick();
 
             bool game_State = true;
 
             Console.WriteLine("The combat starts");
-            Console.WriteLine("You are up aginst a: " + enemy.Name + " Good luck");
+            Console.WriteLine("You are up aginst a: " + currentCreature.Name + " Good luck");
 
             while(game_State == true)
             {
                 if (Player.health <= 1)
                 {
-                    if (enemy.Enemy_Health <= 1)
+                    if (currentCreature.Enemy_Health <= 1)
                     {
 
 
