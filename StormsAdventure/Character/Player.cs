@@ -28,6 +28,7 @@ namespace StormsAdventure.Start
             {
                 isInitialize = true;
                 health = 100;
+                stamina = 100;
             }
 
         }
