@@ -14,8 +14,7 @@ namespace StormsAdventure.Start
         
         public void Menu()
         {
-            Inventory.Initialize();
-            Player.Initialize();
+
             bool state = true;
             
             while (state == true)
@@ -117,12 +116,12 @@ namespace StormsAdventure.Start
 
                 if (playerChoice == "1") //See stats
                 {
-                    run.stats();
+                    Player.Display_Stats();
 
                 }
                 else if (playerChoice == "2") //Move Command
                 {
-                    run.Game_Run();
+                    Run.Game_Tick();
                     state = false;
 
                 }

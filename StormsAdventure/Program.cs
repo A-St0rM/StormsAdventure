@@ -8,9 +8,7 @@ namespace StormsAdventure
         static void Main(string[] args)
         {
 
-            Game_Start start = new Game_Start();
-
-            start.Menu();
+            Run.StartGame();
 
         }
     }

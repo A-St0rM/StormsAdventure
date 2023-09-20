@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StormsAdventure.Character;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,17 +7,22 @@ using System.Threading.Tasks;
 
 namespace StormsAdventure.Start
 {
-    public class Run
+    public static class Run
     {
 
-        public void Game_Run() //For things witch need to tick when the game runs
+        public static void Game_Tick() //For things witch need to tick when the game runs
         {
             Player.Tick_Stamina();
         }
 
-        public void stats()
+        public static void StartGame()
         {
-            Player.Display_Stats();
+            Inventory.Initialize();
+            Player.Initialize();
+
+            Game_Start start = new Game_Start();
+
+            start.Menu();
         }
     }
 }
