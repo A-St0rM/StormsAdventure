@@ -22,22 +22,24 @@ namespace StormsAdventure.Fighting
             {
                 return;
             }
-            else if (Convert.ToInt32(currentTime.TotalHours) <= 6 || Convert.ToInt32(currentTime.TotalHours) >= 18)
+
+            enemies = new List<Creatures>();
+
+            if (Convert.ToInt32(currentTime.TotalHours) <= 6 || Convert.ToInt32(currentTime.TotalHours) >= 18)
             {
                 Creatures enemy1 = new Creatures("Sister", 5, 20); // HAHA sister what a meme
                 Creatures enemy2 = new Creatures("Dog", 1, 10);
                 Creatures enemy3 = new Creatures("Cat", 10, 32);
                 Creatures enemy4 = new Creatures("Cashier", 8, 19); //Fix det lort
                 Creatures enemy5 = new Creatures("Holigan", 7, 27);
-                //enemies.Add(enemy1);
-                //enemies.Add(enemy2);
-                //enemies.Add(enemy3); // // Error occurred when i started the program. Apparently its not set to an object ->  System.NullReferenceException
-                //enemies.Add(enemy4);
-                //enemies.Add(enemy5);
-                //isInitialize = true;
+                enemies.Add(enemy1);
+                enemies.Add(enemy2);
+                enemies.Add(enemy3); // // Error occurred when i started the program. Apparently its not set to an object ->  System.NullReferenceException
+                enemies.Add(enemy4);
+                enemies.Add(enemy5);
+                isInitialize = true;
             }
-
-            else
+            if (Convert.ToInt32(currentTime.TotalMinutes) > 6 || Convert.ToInt32(currentTime.TotalHours) < 18)
             {
                 Creatures enemy1 = new Creatures("Goblin", 5, 20);
                 Creatures enemy2 = new Creatures("Begger", 1, 10);

@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace StormsAdventure.Stuff
 {
 
-
-    
     public class LootDrop
     {
+        public string items { get; set; }
+
         List<LootDrop> lootdrop = new List<LootDrop>();
 
         LootDrop lootDrop1= new LootDrop("random item");
@@ -19,10 +19,8 @@ namespace StormsAdventure.Stuff
         LootDrop lootDrop4 = new LootDrop("random item");
         LootDrop lootDrop5 = new LootDrop("random item");
 
-        LootDrop
+        //LootDrop
 
-
-        public string items;
 
         public LootDrop(string items)
         {
