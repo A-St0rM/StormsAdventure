@@ -27,7 +27,7 @@ namespace StormsAdventure.Fighting
                 Creatures enemy1 = new Creatures("Sister", 5, 20); // HAHA sister what a meme
                 Creatures enemy2 = new Creatures("Dog", 1, 10);
                 Creatures enemy3 = new Creatures("Cat", 10, 32);
-                Creatures enemy4 = new Creatures("Cashier", 8, 19);
+                Creatures enemy4 = new Creatures("Cashier", 8, 19); //Fix det lort
                 Creatures enemy5 = new Creatures("Holigan", 7, 27);
                 //enemies.Add(enemy1);
                 //enemies.Add(enemy2);

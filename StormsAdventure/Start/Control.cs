@@ -20,7 +20,8 @@ namespace StormsAdventure.Start
                 Console.WriteLine("1 - See your stats");
                 Console.WriteLine("2 - Move");
                 Console.WriteLine("3 - See your inventory");
-                Console.WriteLine("4 - Exit the game");
+                Console.WriteLine("4 - See your weapon");
+                Console.WriteLine("5 - Exit the game");
 
                 string playerChoice = Console.ReadLine();
 
@@ -40,7 +41,12 @@ namespace StormsAdventure.Start
                     Inventory.Display_Inventory();
 
                 }
-                else if (playerChoice == "4") //Exit
+                else if (playerChoice == "4")
+                {
+                    WeaponSlot.DisplayCurrentWeapon();
+
+                }
+                else if (playerChoice == "5") //Exit
                 {
                     state = false;
                     Console.Clear();

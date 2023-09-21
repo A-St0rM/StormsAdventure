@@ -21,6 +21,7 @@ namespace StormsAdventure.Start
             Inventory.Initialize();
             Player.Initialize();
             Enemy.Initialize();
+            WeaponSlot.Initialize();
 
             Game_Start start = new Game_Start();
 

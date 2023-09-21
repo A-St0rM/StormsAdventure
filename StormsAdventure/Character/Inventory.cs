@@ -20,6 +20,7 @@ namespace StormsAdventure.Character
             {
                 return;
             }
+
             inventory = new List<Items>();
 
             if (inventory.Count == 0)

@@ -13,7 +13,7 @@ namespace StormsAdventure.Start
     public class House
     {
         Outside outside = new Outside();
-        Game_Start start = new Game_Start();
+        
         Combat Combat = new Combat();
 
         public void Start_House()
