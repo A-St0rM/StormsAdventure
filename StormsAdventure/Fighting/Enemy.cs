@@ -25,7 +25,7 @@ namespace StormsAdventure.Fighting
 
             enemies = new List<Creatures>();
 
-            if (Convert.ToInt32(currentTime.TotalHours) <= 6 || Convert.ToInt32(currentTime.TotalHours) >= 18)
+            if (Convert.ToDouble(currentTime.TotalHours) >= 6.0 || Convert.ToDouble(currentTime.TotalHours) <= 18.0)
             {
                 Creatures enemy1 = new Creatures("Sister", 5, 20); // HAHA sister what a meme
                 Creatures enemy2 = new Creatures("Dog", 1, 10);
@@ -39,7 +39,7 @@ namespace StormsAdventure.Fighting
                 enemies.Add(enemy5);
                 isInitialize = true;
             }
-            if (Convert.ToInt32(currentTime.TotalMinutes) > 6 || Convert.ToInt32(currentTime.TotalHours) < 18)
+            if (Convert.ToDouble(currentTime.TotalMinutes) < 6 || Convert.ToDouble(currentTime.TotalHours) > 18)
             {
                 Creatures enemy1 = new Creatures("Goblin", 5, 20);
                 Creatures enemy2 = new Creatures("Begger", 1, 10);
@@ -59,10 +59,16 @@ namespace StormsAdventure.Fighting
         public static Creatures Enemy_Pick()
         {
             Random rnd = new Random();
-            int num = rnd.Next(0, 4);
+            int num = rnd.Next(0, enemies.Count + 1);
             return enemies[num];
         }
 
+        //public static void Display()
+        //{
+        //    Random rnd = new Random();
+        //    int num = rnd.Next(0, enemies.Count + 1);
+        //    Console.WriteLine(enemies[num].Name);
+        //}
          
 
 
