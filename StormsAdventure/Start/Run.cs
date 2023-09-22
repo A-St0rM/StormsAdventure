@@ -1,5 +1,6 @@
 ﻿using StormsAdventure.Character;
 using StormsAdventure.Fighting;
+using StormsAdventure.Stuff;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace StormsAdventure.Start
             Player.Initialize();
             Enemy.Initialize();
             WeaponSlot.Initialize();
+            LootDrop.Initialize();
 
             Game_Start start = new Game_Start();
 

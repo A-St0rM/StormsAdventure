@@ -15,13 +15,15 @@ namespace StormsAdventure.Fighting
 
         public void Start_Combat()
         {
-
+            int i = 0;
+            
             Creatures currentCreature = Enemy.Enemy_Pick();
 
             bool game_State = true;
 
             Console.WriteLine("The combat starts");
             Console.WriteLine("You are up aginst a: " + currentCreature.Name + " Good luck");
+
 
             while(game_State == true)
             {
@@ -30,7 +32,15 @@ namespace StormsAdventure.Fighting
                     if (currentCreature.Enemy_Health <= 1)
                     {
 
+                        Console.WriteLine("You attack fitst with: " + WeaponSlot.DisplayName() + "And you deal: " + WeaponSlot.DisplayStat());
+                        currentCreature.Enemy_Health -= WeaponSlot.DisplayStat();
 
+                        Console.WriteLine("The enemy attacks you back with: " + currentCreature.Attack_Value + " Damage");
+                        Player.health -= currentCreature.Attack_Value;
+
+                        Console.WriteLine("This is round: " + i);
+
+                        i++;
                     }
                     else
                     {

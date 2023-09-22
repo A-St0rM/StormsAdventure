@@ -10,6 +10,8 @@ namespace StormsAdventure.Stuff
     public static class LootTable
     {
         //Storm har lavet min udgave af en lootTable, vi bruger ikke denne klasse den, skal kun bruges som inspiration, husk det nu, ikke noget med at kopiere. :)
+        //Roger that Hr. Jensen
+        //Okay Fru. Storm
         private static bool isInitialize;
 
         private static List<Items> lootTable;

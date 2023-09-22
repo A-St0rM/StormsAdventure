@@ -59,7 +59,7 @@ namespace StormsAdventure.Fighting
         public static Creatures Enemy_Pick()
         {
             Random rnd = new Random();
-            int num = rnd.Next(0, enemies.Count + 1);
+            int num = rnd.Next(0, enemies.Count);
             return enemies[num];
         }
 

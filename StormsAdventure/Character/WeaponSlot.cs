@@ -64,8 +64,18 @@ namespace StormsAdventure.Character
         public static void DisplayCurrentWeapon()
         {
             Console.WriteLine("This is your current weapon: " + weapons[0].Name + " And it's stats are: " + weapons[0].Weapon_Attack);
+
         }
 
+        public static string DisplayName()
+        {
+            return weapons[0].Name;
+        }
+
+        public static int DisplayStat()
+        {
+            return weapons[0].Weapon_Attack;
+        }
 
 
     }
