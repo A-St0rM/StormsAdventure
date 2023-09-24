@@ -50,6 +50,7 @@ namespace StormsAdventure.Levels
                     Console.WriteLine("Great Job! You won the battle against the enemy! Here is a gift: Sword");
 
                     Weapons Sword = new Weapons("Sword", 10);
+                    
                     WeaponSlot.SwitchWeapon(Sword);  
                     
                     
