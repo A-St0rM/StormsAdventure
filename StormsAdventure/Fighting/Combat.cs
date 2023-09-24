@@ -46,6 +46,7 @@ namespace StormsAdventure.Fighting
                     {
                         Console.Clear();
                         Console.WriteLine("You won the combat stupid :)");
+                        Inventory.AddToInventory(LootTable.GetLoot());
                         game_State =  false;
                     }
 
