@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StormsAdventure.Character;
 using StormsAdventure.Start;
+using StormsAdventure.Stuff;
 
 namespace StormsAdventure.Fighting
 {
@@ -46,7 +47,7 @@ namespace StormsAdventure.Fighting
                     {
                         Console.Clear();
                         Console.WriteLine("You won the combat stupid :)");
-                        Inventory.AddToInventory(LootTable.GetLoot());
+                        Inventory.AddToInventory(Lootdrop.GetLoot());
                         game_State =  false;
                     }
 

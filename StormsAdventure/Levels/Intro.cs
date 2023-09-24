@@ -9,51 +9,10 @@ using StormsAdventure.Stuff;
 
 namespace StormsAdventure.Start
 {
-    public class Game_Start
+    public static class Intro
     {
-        
-        public void Menu()
-        {
 
-            bool state = true;
-            
-            while (state == true)
-            {
-                
-                Console.Clear();
-                Console.WriteLine("Welcome to Storm's RPG game");
-                Console.WriteLine("---------------------------");
-                Console.WriteLine("1 - Start the game");
-                Console.WriteLine("2 - Exit the game");
-
-                string playerChoice = Console.ReadLine();
-
-                if (playerChoice == "1")
-                {
-                    Console.Clear();
-                    state = false;
-                    Game_Intro();
-                    
-
-                }
-                else if (playerChoice == "2")
-                {
-                    state = false;
-                    Console.Clear();
-                    Environment.Exit(0);
-
-                }
-                else
-                {
-                    Console.WriteLine("---------------------------");
-                    Console.WriteLine("U entered a wrong value plz try agian");
-                    Console.Clear();
-                }
-            }
-        }
-        
-
-        public void Game_Intro()
+        public static void Game_Intro()
         {
             House house = new House();
             Console.WriteLine("The sun poured through my window. Another day had dawned. Storm walks down the stairs");
@@ -85,8 +44,8 @@ namespace StormsAdventure.Start
                     Console.WriteLine("Storm: Nah, actually not"); // Need to fix the text, disseapers instantly
                     Console.WriteLine("RIP Alissa Storm");
                     Console.WriteLine("Cause of death: Mom with Shahata");
-                    
-                    Menu();
+
+                    Menu_Start.Menu();
                 }
                 else
                 {

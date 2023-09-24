@@ -25,9 +25,7 @@ namespace StormsAdventure.Start
             WeaponSlot.Initialize();
             Lootdrop.Initialize();
 
-            Game_Start start = new Game_Start();
-
-            start.Menu();
+            Menu_Start.Menu();
         }
     }
 }

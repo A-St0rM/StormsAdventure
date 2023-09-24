@@ -52,7 +52,7 @@ namespace StormsAdventure.Start
                     Console.WriteLine("Mom has packed Cookies and apples for you so you dont get tired on your way!");
                     
                     Inventory.Display_Inventory();
-                    outside.Start_Outside();
+                    Forest.InForest();
                 }
                 else
                 {

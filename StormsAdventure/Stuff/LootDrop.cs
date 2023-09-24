@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StormsAdventure.Stuff
 {
-    public class Lootdrop
+    public static class Lootdrop
     {
 
         private static bool isInitialize; // Is automatically false when given no value for a bool variable
