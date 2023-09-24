@@ -26,6 +26,7 @@ namespace StormsAdventure.Character
             if (!isInitialize)
             {
                 Weapons hands = new Weapons("Hands", 5);
+                Weapons Sword = new Weapons("Sword", 10);
                 weapons.Add(hands);
                 isInitialize = true;
             }

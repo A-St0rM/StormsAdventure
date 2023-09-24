@@ -12,7 +12,7 @@ namespace StormsAdventure.Start
 {
     public class House
     {
-        Outside outside = new Outside();
+        Forest Forest = new Forest();
         
         Combat Combat = new Combat();
 
@@ -91,7 +91,7 @@ namespace StormsAdventure.Start
                     
                     Console.WriteLine("______________________________________________________________________________");
                     Inventory.Display_Inventory();
-                    outside.Start_Outside();
+                    Forest.Start_Outside();
                 }
                 else
                 {

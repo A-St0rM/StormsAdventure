@@ -1,23 +1,25 @@
-﻿using StormsAdventure.Fighting;
+﻿using StormsAdventure.Character;
+using StormsAdventure.Fighting;
 using StormsAdventure.Start;
+using StormsAdventure.Stuff;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace StormsAdventure.Levels
 {
-    public class Outside
+    public class Forest
     {
         
-
         public void Start_Outside()
         {
-            Forest();      
+            InForest();     
         }
 
-        public void Forest()
+        public void InForest()
         {
             Combat combat= new Combat();
 
@@ -35,7 +37,7 @@ namespace StormsAdventure.Levels
 
             while (state)
             {
-                if(PlayerChoice == 1) //In the forest and meeting an enemy
+                if(PlayerChoice == 1) //In the forest. Meeting an enemy
                 {               
                     Console.Write("The forest is vast and seemingly endless, with no clear paths or markers to guide your way.");
                     Console.WriteLine("The deeper you venture, the more you feel cut off from the outside world, as if you've entered another dimension entirely.");
@@ -43,22 +45,30 @@ namespace StormsAdventure.Levels
                     Console.WriteLine("Your heart beats loudly in your chest, the adrenaline coursing through your veins as you inch closer. You try to control your breathing, taking slow, deliberate breaths to avoid giving away your position.");
                     Console.WriteLine("Finally, you catch a glimpse of movement up ahead. It's them – the enemy");
 
-                    //See Inventory before Combat
-                    combat.Start_Combat();
+                    
+                    combat.Start_Combat(); 
+                    Console.WriteLine("Great Job! You won the battle against the enemy! Here is a gift: Sword");
+
+                    Weapons Sword = new Weapons("Sword", 10);
+                    WeaponSlot.SwitchWeapon(Sword);  
+                    
                     
                 }
                 else if (PlayerChoice == 2) 
                 {
 
                     Console.WriteLine("");
+                    Console.WriteLine("Time seemed to lose its meaning as I walked, and I became lost in the rhythm of my own breath and the cadence of my footsteps.");
+                    Console.WriteLine(""); // Meeting a new character
+                    Console.WriteLine("With a contented sigh, I continued my journey");
+                    
 
                 }
             }
 
-
-
-
         }
+
+        
 
 
 

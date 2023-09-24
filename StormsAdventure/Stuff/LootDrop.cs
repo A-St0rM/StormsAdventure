@@ -1,5 +1,4 @@
-﻿using StormsAdventure.Start;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,59 +6,47 @@ using System.Threading.Tasks;
 
 namespace StormsAdventure.Stuff
 {
-
-
-    public static class LootDrop
+    public class Lootdrop
     {
-        private static bool IsInitialize;
-        private static List<Items> lootdrop;
+
+        private static bool isInitialize; // Is automatically false when given no value for a bool variable
+
+        private static List<Items> lootTable;
 
         public static void Initialize()
         {
-            lootdrop = new List<Items>();
-
-            if (IsInitialize)
+            if (isInitialize)
             {
                 return;
             }
-           
 
-            if (!IsInitialize)
+            lootTable = new List<Items>();
+
+            if (!isInitialize)
             {
+
                 Items cookie = new Items("Cookie", 10);
-                Items burgir = new Items("Burgir", 20);
-                Items bolognese = new Items("Bolognese", 30);
-                lootdrop.Add(cookie);
-                lootdrop.Add(burgir);
-                lootdrop.Add(bolognese);
+                Items burgir = new Items("burgir", 20);
+                Items bolognese = new Items("bolognese", 25);
+                lootTable.Add(cookie);
+                lootTable.Add(burgir);
+                lootTable.Add(bolognese);
+
+
+                isInitialize = true;
             }
+
+
+
         }
 
-        public static Items GetLoot() //Add some text
+        public static Items GetLoot()
         {
-            Random random = new Random();
+            Random rnd = new Random();
 
-            int num = random.Next(0, lootdrop.Count);
+            int num = rnd.Next(0, lootTable.Count + 1);
 
-            return lootdrop[num];
+            return lootTable[num];
         }
-
-
-        
-
-        
-
-      
-
-        
-
-
-        
-
-
-        
-
-
-
     }
 }

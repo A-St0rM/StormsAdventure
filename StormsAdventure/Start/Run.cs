@@ -23,7 +23,7 @@ namespace StormsAdventure.Start
             Player.Initialize();
             Enemy.Initialize();
             WeaponSlot.Initialize();
-            LootDrop.Initialize();
+            Lootdrop.Initialize();
 
             Game_Start start = new Game_Start();
 
