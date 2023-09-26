@@ -18,7 +18,7 @@ namespace StormsAdventure.Saves
 
         private List<string> saves = new List<string>();
 
-        public List<string> ReadSave(int save)
+        public List<string>? ReadSave(int save)
         {
             string line;
 
@@ -31,9 +31,9 @@ namespace StormsAdventure.Saves
                     saves.Add(line);
                     line = reader.ReadLine();
                 }
-                return saves;
                 reader.Close();
                 Console.ReadLine();
+                return saves;
             }
             else if (save == 2)
             {
@@ -44,9 +44,9 @@ namespace StormsAdventure.Saves
                     saves.Add(line);
                     line = reader.ReadLine();
                 }
-                return saves;
                 reader.Close();
                 Console.ReadLine();
+                return saves;
             }
             else if (save == 3)
             {
@@ -57,22 +57,24 @@ namespace StormsAdventure.Saves
                     saves.Add(line);
                     line = reader.ReadLine();
                 }
-                return saves;
                 reader.Close();
                 Console.ReadLine();
+                return saves;
+            }
+            else if (save == 0)
+            {
+                return null;
             }
             return null;
 
         }
 
-        public void WriteSave(int save, string name, int stamina, int health)
+        public void WriteSave(int save, string name)
         {
             if (save == 1)
             {
                 StreamWriter writer = new StreamWriter("..\\..\\..\\Saves\\Save-1.txt");
                 writer.WriteLine(name);
-                writer.WriteLine(stamina);
-                writer.WriteLine(health);
                 writer.Close();
                 Console.WriteLine("Content have been saved to Save-1");
             }
@@ -80,8 +82,6 @@ namespace StormsAdventure.Saves
             {
                 StreamWriter writer = new StreamWriter("..\\..\\..\\Saves\\Save-2.txt");
                 writer.WriteLine(name);
-                writer.WriteLine(stamina);
-                writer.WriteLine(health);
                 writer.Close();
                 Console.WriteLine("Content have been saved to Save-2");
 
@@ -90,8 +90,6 @@ namespace StormsAdventure.Saves
             {
                 StreamWriter writer = new StreamWriter("..\\..\\..\\Saves\\Save-3.txt");
                 writer.WriteLine(name);
-                writer.WriteLine(stamina);
-                writer.WriteLine(health);
                 writer.Close();
                 Console.WriteLine("Content have been saved to Save-3");
 

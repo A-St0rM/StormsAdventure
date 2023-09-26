@@ -11,7 +11,8 @@ namespace StormsAdventure.Start
 {
     public static class Player
     {
-        
+        public static string name { get; set; }
+
         public static int health { get; set; }
 
         public static int stamina { get; set; }
@@ -26,6 +27,7 @@ namespace StormsAdventure.Start
             }
             else
             {
+                name = "Alissa";
                 health = 100;
                 stamina = 100;
                 isInitialize = true;
@@ -35,7 +37,7 @@ namespace StormsAdventure.Start
 
         public static void Display_Stats()
         {
-            Console.WriteLine("Stamina: " + stamina + " Health " + health);
+            Console.WriteLine("Your name are: " + name + " And your stats are: " + "Stamina: " + stamina + " Health " + health);
         }
 
         public static void Tick_Stamina()

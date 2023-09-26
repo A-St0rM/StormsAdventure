@@ -33,6 +33,7 @@ namespace StormsAdventure.Fighting
                     if (currentCreature.Enemy_Health <= 1)
                     {
 
+
                         Console.WriteLine("You attack fitst with: " + WeaponSlot.DisplayName() + "And you deal: " + WeaponSlot.DisplayStat());
                         currentCreature.Enemy_Health -= WeaponSlot.DisplayStat();
 
