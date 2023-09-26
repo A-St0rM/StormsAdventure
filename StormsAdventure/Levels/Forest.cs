@@ -69,7 +69,38 @@ namespace StormsAdventure.Levels
 
         }
 
-        
+        public void AfterForest()
+        {
+
+            Console.WriteLine(""); // We see a Mountain
+            Console.WriteLine(""); // We meet an acquaintance
+
+            bool state = true;
+            int PlayerChoice =Convert.ToInt32(Console.ReadLine());
+
+            while (state)
+            {
+                if(PlayerChoice == 1)
+                {
+                    
+                    //Jumping over to Mountains class by using Mountain method
+
+                }
+                else if (PlayerChoice == 2)
+                {
+                    //Acquaintance method --> Mountains class
+                }
+
+
+
+
+
+
+            }
+
+
+
+        }
 
 
 

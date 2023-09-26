@@ -58,7 +58,7 @@ namespace StormsAdventure.Fighting
                     Console.Clear();
                     Console.WriteLine("You have died");
                     Console.WriteLine("What a noob");
-                    game_State = false; //If loosing the battle to we restart?
+                    game_State = false; //If loosing the battle do we restart?
                 }
             }
 

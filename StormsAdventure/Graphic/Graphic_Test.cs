@@ -8,5 +8,6 @@ namespace StormsAdventure.Graphic
 {
     internal class Graphic_Test
     {
+        //Im telling you man. I learn Unreal engine and then bam bam we have graphic. TRUST ;)
     }
 }
