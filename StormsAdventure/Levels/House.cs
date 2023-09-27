@@ -68,6 +68,7 @@ namespace StormsAdventure.Start
         {
             Console.WriteLine("You are watching TV with ur siblings. The front door is now on right side and the kitchen straight forward");
             Control.Controls();
+
             Console.WriteLine("Where would you like to go?");
             Console.WriteLine(" 1 - Forward");
             Console.WriteLine(" 2 - Front door");

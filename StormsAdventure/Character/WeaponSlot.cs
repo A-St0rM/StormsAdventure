@@ -50,6 +50,8 @@ namespace StormsAdventure.Character
                     weapons.Remove(weapons[0]);
                     weapons.Add(weapon);
                     Console.WriteLine("You just switched your weapon :)");
+                    //Kommer ikke videre når man skriver Ja. Opdatere kun stats og derefter skal man skrive no for at hoppe videre 
+                    
                 }
                 else if (playerChoice.ToLower() == "no")
                 {

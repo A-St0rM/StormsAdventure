@@ -19,15 +19,18 @@ namespace StormsAdventure.Levels
             InForest();     
         }
 
-        public void InForest()
+        public static void InForest()
         {
-            Combat combat= new Combat();
+            Combat combat = new Combat();
 
             Console.Write("After some time walking from your house. You reach a point where you have two options. You can either take the short cut through the forest");
             Console.WriteLine(" or take the longer way by taking the original walking path ");
+            Control.Controls();
+
             Console.WriteLine("Where would you like to go?");
             Console.WriteLine(" 1 - Through the forest");
             Console.WriteLine(" 2 - The walking path");
+            Console.WriteLine(" 3 - "); //Uknown
             
 
             bool state = true;
@@ -51,17 +54,19 @@ namespace StormsAdventure.Levels
 
                     Weapons Sword = new Weapons("Sword", 10);
                     
-                    WeaponSlot.SwitchWeapon(Sword);  
+                    WeaponSlot.SwitchWeapon(Sword);
+
+                    AfterForest();
                     
                     
                 }
-                else if (PlayerChoice == 2) 
+                else if (PlayerChoice == 2) // Meeting a new character
                 {
 
                     Console.WriteLine("");
-                    Console.WriteLine("Time seemed to lose its meaning as I walked, and I became lost in the rhythm of my own breath and the cadence of my footsteps.");
-                    Console.WriteLine(""); // Meeting a new character
-                    Console.WriteLine("With a contented sigh, I continued my journey");
+                    Console.WriteLine("The path seemed never ending, time seemed to lose its meaning as I walked, and I became lost in the rhythm of my own breath and the cadence of my footsteps.");
+                    Console.WriteLine("Until i met a stranger"); 
+                   
                     
 
                 }
@@ -69,11 +74,14 @@ namespace StormsAdventure.Levels
 
         }
 
-        public void AfterForest()
+        public static void AfterForest()
         {
 
-            Console.WriteLine(""); // We see a Mountain
+            Console.WriteLine("As i walked further, I see from a distance a little peak from a mountain. Since when "); // We see a Mountain
             Console.WriteLine(""); // We meet an acquaintance
+            Console.WriteLine("Where would you like to go?");
+
+            Control.Controls();
 
             bool state = true;
             int PlayerChoice =Convert.ToInt32(Console.ReadLine());
@@ -82,13 +90,14 @@ namespace StormsAdventure.Levels
             {
                 if(PlayerChoice == 1)
                 {
-                    
-                    //Jumping over to Mountains class by using Mountain method
+
+                    Mountains.Mountain(); //Jumping over to Mountains class by using Mountain method
 
                 }
                 else if (PlayerChoice == 2)
                 {
                     //Acquaintance method --> Mountains class
+                    Console.WriteLine("With a contented sigh, I continued my journey");
                 }
 
 
