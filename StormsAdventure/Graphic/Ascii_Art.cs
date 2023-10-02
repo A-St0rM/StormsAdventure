@@ -13,7 +13,13 @@ namespace StormsAdventure.Graphic
 
         private static string forest = "  ______                  _   \r\n |  ____|                | |  \r\n | |__ ___  _ __ ___  ___| |_ \r\n |  __/ _ \\| '__/ _ \\/ __| __|\r\n | | | (_) | | |  __/\\__ \\ |_ \r\n |_|  \\___/|_|  \\___||___/\\__|\r\n                              \r\n                              ";
 
+        private static string gameStart = "   _____ _                                         _                 _                  \r\n  / ____| |                               /\\      | |               | |                 \r\n | (___ | |_ ___  _ __ _ __ ___  ___     /  \\   __| |_   _____ _ __ | |_ _   _ _ __ ___ \r\n  \\___ \\| __/ _ \\| '__| '_ ` _ \\/ __|   / /\\ \\ / _` \\ \\ / / _ \\ '_ \\| __| | | | '__/ _ \\\r\n  ____) | || (_) | |  | | | | | \\__ \\  / ____ \\ (_| |\\ V /  __/ | | | |_| |_| | | |  __/\r\n |_____/ \\__\\___/|_|  |_| |_| |_|___/ /_/    \\_\\__,_| \\_/ \\___|_| |_|\\__|\\__,_|_|  \\___|\r\n                                                                                        \r\n                                                                                        ";
 
+
+        public static void Ascii_GameStart()
+        {
+            Console.WriteLine(gameStart);
+        }
 
         public static void Ascii_House()
         {

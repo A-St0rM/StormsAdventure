@@ -1,4 +1,5 @@
 ﻿using Spectre.Console;
+using StormsAdventure.Graphic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,10 +20,10 @@ namespace StormsAdventure.Start
             {
 
                 Console.Clear();
-
+                Ascii_Art.Ascii_GameStart();
                 //Made a new menu system, so we can iteract with it.
                 var playerChoice = AnsiConsole.Prompt(new SelectionPrompt<string>()
-                    .Title("Welcome to Storm's RPG game")
+                    .Title("Welcome to Storm's RPG game\n ---------------------------")
                     .PageSize(3)
                     .AddChoices("Start the game", "Exit the game"));
 

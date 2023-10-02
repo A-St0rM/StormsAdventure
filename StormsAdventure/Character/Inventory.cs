@@ -1,4 +1,5 @@
 ﻿ using StormsAdventure.Start;
+using Spectre.Console;
 using StormsAdventure.Stuff;
 using System;
 using System.Collections.Generic;
@@ -37,21 +38,37 @@ namespace StormsAdventure.Character
         }
 
         public static void Display_Inventory()
-        { 
-            Console.WriteLine("\tThis is your inventory");
+        {
+            
+            Console.WriteLine("This is your inventory");
             for (int i = 0; i < inventory.Count; i++)
             {
-                Console.WriteLine(i + " || " + inventory[i].Name + " || " + inventory[i].Item_stat);
+                Console.WriteLine(inventory[i].Name + " || " + inventory[i].Item_stat);
             }
             bool  inv_State = true;
             while (inv_State == true)
             {
-                Console.WriteLine("Do you want to use anything from your inventroy");
-                Console.WriteLine("Yes / No");
-                string player_Answer = Console.ReadLine();
+                //Made a new menu system, so we can iteract with it.
+                var player_Answer = AnsiConsole.Prompt(new SelectionPrompt<string>()
+                    .Title("Do you want to use anything from your inventroy\n ---------------------------")
+                    .PageSize(3)
+                    .AddChoices("yes", "no"));
 
-                if (player_Answer.ToLower() == "yes")
+
+                //Console.WriteLine("Do you want to use anything from your inventroy");
+                //Console.WriteLine("Yes / No");
+                //string player_Answer = Console.ReadLine();
+
+                if (player_Answer == "yes")
                 {
+
+                    //var inventory_Index = AnsiConsole.Prompt(new SelectionPrompt<string>()
+                    //    .Title("Do you want to use anything from your inventroy\n ---------------------------")
+                    //    .PageSize(3)
+                    //    .AddChoices("yes", "no")); 
+                    //This dont work yet, but it will at some point hehe
+
+
                     Console.WriteLine("Choose what index from your inventory you want :)");
                     int inventory_Index = Convert.ToInt32(Console.ReadLine());
 
@@ -60,14 +77,10 @@ namespace StormsAdventure.Character
                     inv_State = false;
                     Console.Clear();
                 }
-                else if (player_Answer.ToLower() == "no")
+                else if (player_Answer == "no")
                 {
                     inv_State = false;
                     Console.Clear();
-                }
-                else
-                {
-                    Console.WriteLine("Pla write the corret answer");
                 }
             }
 

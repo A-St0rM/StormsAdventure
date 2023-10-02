@@ -28,6 +28,7 @@ namespace StormsAdventure.Start
 
         public void DownStairs()
         {
+            Console.Clear();
             Ascii_Art.Ascii_House();
             Console.WriteLine("You are currently in the kitchen");
             Console.WriteLine("The front door is on your left and the living room is straight ahead");
@@ -69,6 +70,7 @@ namespace StormsAdventure.Start
         }   
         public void LivingRoom()
         {
+            Console.Clear();
             Ascii_Art.Ascii_House();
             Console.WriteLine("You are watching TV with ur siblings. The front door is now on right side and the kitchen straight forward");
             Control.Controls();
