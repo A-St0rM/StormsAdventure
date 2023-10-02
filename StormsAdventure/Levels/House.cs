@@ -1,5 +1,6 @@
 ﻿using StormsAdventure.Character;
 using StormsAdventure.Fighting;
+using StormsAdventure.Graphic;
 using StormsAdventure.Levels;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace StormsAdventure.Start
 
         public void Start_House()
         {
+            Ascii_Art.Ascii_House();
             Console.WriteLine("You are in a house");
             //Combat.Start_Combat();
             DownStairs();
@@ -26,6 +28,7 @@ namespace StormsAdventure.Start
 
         public void DownStairs()
         {
+            Ascii_Art.Ascii_House();
             Console.WriteLine("You are currently in the kitchen");
             Console.WriteLine("The front door is on your left and the living room is straight ahead");
             Control.Controls();
@@ -66,6 +69,7 @@ namespace StormsAdventure.Start
         }   
         public void LivingRoom()
         {
+            Ascii_Art.Ascii_House();
             Console.WriteLine("You are watching TV with ur siblings. The front door is now on right side and the kitchen straight forward");
             Control.Controls();
 

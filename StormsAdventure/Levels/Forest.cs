@@ -1,5 +1,6 @@
 ﻿using StormsAdventure.Character;
 using StormsAdventure.Fighting;
+using StormsAdventure.Graphic;
 using StormsAdventure.Start;
 using StormsAdventure.Stuff;
 using System;
@@ -16,11 +17,13 @@ namespace StormsAdventure.Levels
         
         public void Start_Outside()
         {
+            Ascii_Art.Ascii_Forest();
             InForest();     
         }
 
         public static void InForest()
         {
+            Ascii_Art.Ascii_Forest();
             Combat combat = new Combat();
 
             Console.Write("After some time walking from your house. You reach a point where you have two options. You can either take the short cut through the forest");
@@ -76,7 +79,7 @@ namespace StormsAdventure.Levels
 
         public static void AfterForest()
         {
-
+            Ascii_Art.Ascii_Forest();
             Console.WriteLine("As i walked further, I see from a distance a little peak from a mountain. Since when "); // We see a Mountain
             Console.WriteLine(""); // We meet an acquaintance
             Console.WriteLine("Where would you like to go?");
