@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using StormsAdventure.Stuff;
 using StormsAdventure.Character;
+using StormsAdventure.Graphic;
 
 namespace StormsAdventure.Start
 {
@@ -37,7 +38,9 @@ namespace StormsAdventure.Start
 
         public static void Display_Stats()
         {
-            Console.WriteLine("Your name are: " + name + " And your stats are: " + "Stamina: " + stamina + " Health " + health);
+            Console.Clear();
+            Console.WriteLine("Your name are: " + name);
+            Beautifier.CoolBar(health, stamina);
         }
 
         public static void Tick_Stamina()

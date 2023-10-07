@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using StormsAdventure.Graphic;
 
 namespace StormsAdventure.Character
 {
@@ -82,11 +83,11 @@ namespace StormsAdventure.Character
                         if (inv_index == "Empty_Slot")
                         {
                             Console.Clear();
-                            AnsiConsole.MarkupLine("[red]U dont have anything in that slot[/]"); //this can add color to your text
+                            Beautifier.CoolWrite("red", "U dont have anything in that slot"); //this can add color to your text
                             player_state = true;
                         }
                         else if(inv_index != "Empty_Slot")
-                        {
+                        { 
                             int index = inventory.FindIndex(item => item.Name == inv_index);
                             PickFromInventory(inventory[index]);
                             player_state = false;

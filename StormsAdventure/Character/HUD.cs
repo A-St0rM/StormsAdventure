@@ -10,5 +10,6 @@ namespace StormsAdventure.Character
     {
         //Tænker jeg vil begynde på at lave en lille bar i hjørnet imens man spiller for at se stamina og navn. Ville være super smart inden man hopper i kamp eller
         // skal advarere spilleren om at spise mad.
+        //Brug dette som inspiration https://spectreconsole.net/widgets/table
     }
 }

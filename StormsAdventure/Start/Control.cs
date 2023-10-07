@@ -42,6 +42,7 @@ namespace StormsAdventure.Start
                 }
                 else if (playerChoice == "Move") //Move Command
                 {
+                    Console.Clear();
                     Run.Game_Tick();
                     state = false;
 
