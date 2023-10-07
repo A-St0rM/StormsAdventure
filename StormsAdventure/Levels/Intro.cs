@@ -30,6 +30,7 @@ namespace StormsAdventure.Start
             {
 
                 var playerChoice = AnsiConsole.Prompt(new SelectionPrompt<string>()
+                    .Title("---------------------------")
                     .PageSize(3)
                     .AddChoices("Sure, i can do that", "Nah, actually not"));
 

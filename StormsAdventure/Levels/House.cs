@@ -22,6 +22,7 @@ namespace StormsAdventure.Start
             Ascii_Art.Ascii_House();
             Console.WriteLine("You are in a house");
             //Combat.Start_Combat();
+            Control.Controls();
             DownStairs();
         }
 
@@ -32,7 +33,6 @@ namespace StormsAdventure.Start
             Ascii_Art.Ascii_House();
             Console.WriteLine("You are currently in the kitchen");
             Console.WriteLine("The front door is on your left and the living room is straight ahead");
-            Control.Controls();
             
             Console.WriteLine("Where would you like to go?");
             Console.WriteLine(" 1 - Forward");

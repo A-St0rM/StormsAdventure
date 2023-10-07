@@ -39,7 +39,7 @@ namespace StormsAdventure.Character
 
         public static void Display_Inventory()
         {
-            
+            //slot system
             Console.WriteLine("This is your inventory");
             for (int i = 0; i < inventory.Count; i++)
             {
