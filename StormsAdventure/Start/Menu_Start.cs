@@ -1,6 +1,7 @@
 ﻿using Spectre.Console;
 using StormsAdventure.Graphic;
 using System;
+//using System.Windows.Forms.SendKeys;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace StormsAdventure.Start
 
             bool state = true;
 
-            while (state == true)
+            while (state == true) 
             {
 
                 Console.Clear();
@@ -47,6 +48,7 @@ namespace StormsAdventure.Start
                     state = false;
                     Console.Clear();
                     Environment.Exit(0);
+                    //SendKeys.SendWait("{ENTER}");
 
                 }
                 else
