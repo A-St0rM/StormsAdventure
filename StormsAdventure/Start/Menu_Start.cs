@@ -23,10 +23,7 @@ namespace StormsAdventure.Start
                 Console.Clear();
                 Ascii_Art.Ascii_GameStart();
                 //Made a new menu system, so we can iteract with it.
-                var playerChoice = AnsiConsole.Prompt(new SelectionPrompt<string>()
-                    .Title("Welcome to Storm's RPG game\n ---------------------------")
-                    .PageSize(3)
-                    .AddChoices("Start the game", "Exit the game"));
+                var playerChoice = Beautifier.CoolMenu("Welcome to Storm's RPG game", 3, "Start the game", "Exit the game");
 
                 //Console.WriteLine("Welcome to Storm's RPG game");
                 //Console.WriteLine("---------------------------");

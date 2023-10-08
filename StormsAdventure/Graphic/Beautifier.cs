@@ -26,5 +26,32 @@ namespace StormsAdventure.Graphic
                 .AddItem("Stamina", stamina, Color.Yellow1));
         }
 
+        public static string CoolMenu(string title, string choice1, string choice2)//Method overload for 2 choices
+        {
+            string playerChoice = AnsiConsole.Prompt(new SelectionPrompt<string>()
+                .Title($"{title}\n ---------------------------")
+                .PageSize(3)
+                .AddChoices(choice1, choice2));
+            return playerChoice;
+        }
+
+        public static string CoolMenu(string title, string choice1, string choice2, string choice3)//Method overload for 3 choices
+        {
+            string playerChoice = AnsiConsole.Prompt(new SelectionPrompt<string>()
+                .Title($"{title}\n ---------------------------")
+                .PageSize(4)
+                .AddChoices(choice1, choice2, choice3));
+            return playerChoice;
+        }
+
+        public static string CoolMenu(string title, string choice1, string choice2, string choice3, string choice4)//Method overload for 4 choices
+        {
+            string playerChoice = AnsiConsole.Prompt(new SelectionPrompt<string>()
+                .Title($"{title}\n ---------------------------")
+                .PageSize(5)
+                .AddChoices(choice1, choice2, choice3, choice4));
+            return playerChoice;
+        }
+
     }
 }

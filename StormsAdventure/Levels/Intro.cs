@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Spectre.Console;
 using StormsAdventure.Character;
+using StormsAdventure.Fighting;
+using StormsAdventure.Graphic;
 using StormsAdventure.Stuff;
 //using StormsAdventure.Levels;
 
@@ -29,11 +31,7 @@ namespace StormsAdventure.Start
             while (state == true)
             {
 
-                var playerChoice = AnsiConsole.Prompt(new SelectionPrompt<string>()
-                    .Title("---------------------------")
-                    .PageSize(3)
-                    .AddChoices("Sure, i can do that", "Nah, actually not"));
-
+                var playerChoice = Beautifier.CoolMenu("", 3, "Sure, i can do that", "Nah, actually not");
 
                 //Console.WriteLine("1 - Storm: Sure, i can do that");
                 //Console.WriteLine("2 - Storm: Nah, actually not");
@@ -53,7 +51,7 @@ namespace StormsAdventure.Start
                     Console.WriteLine("Storm: Nah, actually not"); // Need to fix the text, disseapers instantly
                     Console.WriteLine("RIP Alissa Storm");
                     Console.WriteLine("Cause of death: Mom with Shahata");
-
+                    //Combat.Start_Combat();
                     Menu_Start.Menu();
                 }
             }
